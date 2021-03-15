@@ -1,3 +1,6 @@
+import PropTypes from 'prop-types'
+
+
 const Button = (props) => {
   return (
     <div>
@@ -8,9 +11,15 @@ const Button = (props) => {
   )
 }
 
-// Button.defaultProps = {
-//   color: 'green',
-//   text: 'Hello'
-// }
+
+Button.defaultProps = {
+  color: 'steelBlue',
+  text: 'Add'
+}
+
+Button.protoTypes = {
+  text: PropTypes.string,
+  color: PropTypes.string
+}
 
 export default Button
