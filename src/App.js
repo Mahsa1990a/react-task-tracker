@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Tasks from './components/Tasks';
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     //all should be insde dev
     <div className="container">
       <Header />
+      <Tasks />
     </div>
   );
 }
