@@ -6,7 +6,7 @@ function App() {
 
     //all should be insde dev
     <div className="container">
-      <Header title='Hello' />
+      <Header />
     </div>
   );
 }
