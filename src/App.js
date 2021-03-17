@@ -29,6 +29,11 @@ function App() {
     ]
   );
 
+  //Add Task
+  const AddTask = (task) => {
+    console.log(task)
+  }
+
   //Delete Task
   const deleteTask = (id) => {
     // console.log('delete', id);
