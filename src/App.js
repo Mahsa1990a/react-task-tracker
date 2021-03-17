@@ -35,8 +35,11 @@ function App() {
   }
 
   //Toggle Reminder
-  const toggleReminder = (id) => {
-    console.log(id);
+  const toggleReminder = (id) => { //we want with double click toggle the reminder From false to True and wiseversa
+    // console.log(id);
+    //map through tasks and if task.id === id true => ...task means copy all of the task and reminder: !task.reminder means change the reminder
+    //if it's false change to to True and wiseversa and false => just return task
+    setTasks(tasks.map(task => task.id === id ? {...task, reminder: !task.reminder } : task));
   }
 
   return (
