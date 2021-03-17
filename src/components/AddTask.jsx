@@ -13,15 +13,17 @@ const AddTask = () => {
 
       <div className='form-control'>
         <label>Task</label>
-        <input type='text' placeholder='Add Task'/>
+        {/* When you type in input, it's gonna fire onChange=> it's a controlled component */}
+        <input type='text' placeholder='Add Task' value={text} onChange={(e) => setText(e.target.value)}/>
       </div>
       <div className='form-control'>
         <label>Day & Time</label>
-        <input type='text' placeholder='Add Day & Time'/>
+        <input type='text' placeholder='Add Day & Time' value={day} onChange={(e) => setDay(e.target.value)}/>
       </div>
       <div className='form-control form-control-check'>
         <label>Set Reminder</label>
-        <input type='checkbox'/>
+        {/* becuase it's a checkbox we put : e.currentTarget.checked which give us T or F based box is checked or not */}
+        <input type='checkbox' value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)}/>
       </div>
 
       <input type='submit' value='Save Task' className='btn btn-block' />
