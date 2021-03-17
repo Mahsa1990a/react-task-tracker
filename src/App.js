@@ -9,28 +9,8 @@ function App() {
   //to press Add button show form and hidden it
   const [showAddTask, setShowAddTask] = useState(false)
 
-  const [tasks, setTasks] = useState( //as default it is same taske arr
-    [
-      {
-        id: 1,
-        text: "AAA",
-        day: "Feb 6th @1:30pm",
-        reminder: true 
-      },
-      {
-        id: 2,
-        text: "BBB",
-        day: "Dec 7th @2:30pm",
-        reminder: true 
-      },
-      {
-        id: 3,
-        text: "CCC",
-        day: "Jan 8th @3:30pm",
-        reminder: false 
-      }
-    ]
-  );
+  //as default it is same taske arr
+  const [tasks, setTasks] = useState([]); //we deleted obj and moved it to db.json to fetch data from there
 
   //Add Task
   const addTask = (task) => {
