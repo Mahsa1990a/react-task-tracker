@@ -6,6 +6,9 @@ import AddTask from './components/AddTask';
 
 function App() {
 
+  //to press Add button show form and hidden it
+  const [showAddTask, setShowAddTask] = useState(false)
+
   const [tasks, setTasks] = useState( //as default it is same taske arr
     [
       {
