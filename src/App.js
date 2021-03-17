@@ -61,7 +61,9 @@ function App() {
     //all should be insde dev
     <div className="container">
       <Header />
-      <AddTask onAdd={addTask} />
+      {/* if showAddTask is true the show AddTask component : */}
+      { showAddTask && <AddTask onAdd={addTask} /> }
+      
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : 'No Tasks To Show'}
     </div>
   );
