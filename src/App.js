@@ -30,8 +30,13 @@ function App() {
   );
 
   //Add Task
-  const AddTask = (task) => {
-    console.log(task)
+  const addTask = (task) => {
+    // console.log(task) instaed of console.log we wanna add it into our state so:
+    const id = Math.floor(Math.random() * 10000) + 1; //gives us random number
+    //newTask will be an obj with id and everything from task in line 33
+    const newTask = { id, ...task };
+
+    setTasks([...tasks, newTask]); //so now we can add new task
   }
 
   //Delete Task
@@ -53,7 +58,7 @@ function App() {
     //all should be insde dev
     <div className="container">
       <Header />
-      <AddTask />
+      <AddTask onAdd={addTask} />
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : 'No Tasks To Show'}
     </div>
   );
