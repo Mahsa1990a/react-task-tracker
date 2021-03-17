@@ -60,7 +60,7 @@ function App() {
 
     //all should be insde dev
     <div className="container">
-      <Header />
+      <Header onAdd={() => setShowAddTask(!showAddTask)}/>
       {/* if showAddTask is true the show AddTask component : */}
       { showAddTask && <AddTask onAdd={addTask} /> }
       
