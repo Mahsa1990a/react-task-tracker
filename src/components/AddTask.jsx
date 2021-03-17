@@ -17,6 +17,7 @@ const AddTask = ({ onAdd }) => {
 
     onAdd({ text, day, reminder })
 
+    //To clear form after submit:
     setText('');
     setDay('');
     setReminder(false);
