@@ -1,4 +1,5 @@
-import { useState } from 'react';
+//in order to load tasks when page load we need use hook: useEffect to deal with side effect
+import { useState, useEffect } from 'react';
 
 import Header from './components/Header';
 import Tasks from './components/Tasks';
@@ -11,6 +12,17 @@ function App() {
 
   //as default it is same taske arr
   const [tasks, setTasks] = useState([]); //we deleted obj and moved it to db.json to fetch data from there
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const res = await fetch('http://localhost:5000/tasks');
+      const data = await res.json();
+
+      console.log("data", data);
+    }
+
+    fetchTasks()
+  }, [])
 
   //Add Task
   const addTask = (task) => {
